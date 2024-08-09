@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="select-hero-container">
+    <h1>Select Your Hero</h1>
+    <div class="hero-grid">
+        {% for hero in heroes %}
+        <a href="{% url 'chat' hero.id %}" class="hero-card">
+            <img src="{{ hero.image.url }}" alt="{{ hero.name }}">
+            <span>{{ hero.name }}</span>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

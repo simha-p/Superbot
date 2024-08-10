@@ -1,6 +1,7 @@
 # Superbot
 
-![Screenshot 2024-08-08 165103](https://github.com/user-attachments/assets/c5d3658a-3f5c-4058-8619-515ec242bb6e)
+![SUPERHERO FRIEND (1)](https://github.com/user-attachments/assets/4e3ab0a1-0261-415e-af1b-0c5c9470d025)
+
 
 
 Superbot is an AI assistant built with Django, leveraging Google API to enhance productivity and streamline various tasks. This web-based application combines powerful backend processing with a clean, responsive frontend to provide intelligent responses and automate complex workflows.
@@ -63,7 +64,8 @@ python manage.py runserver
 Built with Django and powered by Google API 🚀
 
 
-![Uploading Screenshot 2024-08-08 184335.png…]()
+![Screenshot 2024-08-08 184352](https://github.com/user-attachments/assets/d55fbaa1-8884-4b1a-9884-4eb0b30e632c)
+
 
 
 ![Screenshot 2024-08-08 184541](https://github.com/user-attachments/assets/94b1fe22-f06f-476c-981b-739ab94007f4)

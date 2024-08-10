@@ -1,15 +1,13 @@
 # Superbot
 
 
-
 ## Overview
 
-Superbot is an advanced AI assistant built with Django, leveraging Google API to enhance productivity and streamline various tasks. This web-based application combines powerful backend processing with a clean, responsive frontend to provide intelligent responses and automate complex workflows.
+Superbot is an AI assistant built with Django, leveraging Google API to enhance productivity and streamline various tasks. This web-based application combines powerful backend processing with a clean, responsive frontend to provide intelligent responses and automate complex workflows.
 
 ## Features
 
 - **Natural Language Understanding**: Processes and understands user queries in natural language.
-- **Task Automation**: Automates repetitive tasks and workflows.
 - **Intelligent Responses**: Provides context-aware and informative responses to user queries.
 - **Multi-domain Knowledge**: Covers a wide range of topics and domains.
 - **Customizable**: Can be tailored to specific use cases or industry needs.
@@ -25,7 +23,7 @@ Superbot is an advanced AI assistant built with Django, leveraging Google API to
 
 ## Prerequisites
 
-- Python 3.7+
+- Python
 - Django
 - Google API key
 

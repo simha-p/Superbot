@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY =os.environ.get('SECRET_KEY','django-insecure-9=#yw^2^^)ig*xr$6gqgxj4hkow!m@$n(cv+94dhf5oh($78b0')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['superbot.vercel.app', 'localhost']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -41,7 +41,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -129,4 +129,3 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
-STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles_build', 'static')

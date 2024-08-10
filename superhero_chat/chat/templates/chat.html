@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="chat-container" style="background-image: url('{{ hero.background_image.url }}');">
+    <div id="chat-messages"></div>
+    <div class="chat-input">
+        <input type="text" id="user-input" placeholder="Type your message...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+    <div class="chat-buttons">
+        <a href="{% url 'exit_chat' %}" class="btn">Exit</a>
+        <a href="{% url 'change_hero' %}" class="btn">Change Hero</a>
+    </div>
+</div>
+
+<script>
+var userIcon = "{{ user_icon}}";
+function sendMessage() {
+    var userInput = document.getElementById('user-input').value;
+    var chatMessages = document.getElementById('chat-messages');
+    
+    // Add user message
+    chatMessages.innerHTML += '<div class="user-message"><span class="user-icon">S </span><p>' + userInput + '</p></div>';
+    
+    // Send request to server
+    fetch('{% url "generate_response" %}', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'X-CSRFToken': '{{ csrf_token }}'
+        },
+        body: 'message=' + encodeURIComponent(userInput) + '&hero_id={{ hero.id }}'
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Add hero response
+        chatMessages.innerHTML += '<div class="hero-message"><img src="{{ hero.icon.url }}"><p>' + data.response + '</p></div>';
+    });
+    
+    document.getElementById('user-input').value = '';
+}
+</script>
+{% endblock %}

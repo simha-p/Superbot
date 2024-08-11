@@ -78,7 +78,16 @@ WSGI_APPLICATION = 'superhero_chat.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES['default']=dj_database_url.config()
+DATABASES={
+    'default':{
+        'ENGINE':'django.db.backends.postgresql',
+        'NAME':'railway',
+        'USER':'postgres',
+        'PASSWORD':'nNlozosktVDLUHFKDMehKCykOIJPraiO',
+        'HOST':'postgres.railway.internal',
+        'PORT':'5432',
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
